@@ -1,0 +1,60 @@
+ <div>
+    <div>  
+      <h2 class="text-center has-text-white">Welcome, {{name}}!</h2>
+    </div>
+  
+ 
+  <div class="container">
+    <div class="is-justify-content-center is-align-content-center" id="intro-page">
+      <h2>My Recipes</h2>
+      <!-- this is where the recipes that have been saved will display in link formation-->
+      
+      
+      <div>
+        <input class="has-text-black" type="text" placeholder="Search Favorite" autofocus />
+            <button class="btn">Find</button>
+      </div>
+      {{#if recipes.length}}
+      <div>
+        {{#each recipes as |recipe|}}
+          <div >
+            <h4><a href="/recipe/{{recipe.id}}">{{recipe.name}}</a></h4>
+          </div>
+        {{/each}}
+      </div>
+      {{/if}}
+    </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="is-justify-content-center is-align-content-center" id="intro-page">
+      <h2>Current Recipe</h2>
+      <div>
+        <h2>{{name}}</h2>
+        <p>{{{ingredients}}}</p>
+        <p>{{directions}}</p>
+        
+      </div>
+    </div>
+  </div>
+ 
+  <div class="container">
+    <div class="is-justify-content-center is-align-content-center" id="intro-page">
+      <h2>Comments</h2>
+      <p>{{comments}}</p>
+      <div class="field">
+        <label class="label">Add Comments</label>
+        <div class="control">
+          <textarea class="textarea is-small" placeholder=""></textarea>
+        </div>
+      </div>
+      
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ </section>

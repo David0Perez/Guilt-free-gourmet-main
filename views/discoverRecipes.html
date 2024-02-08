@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/public/css/">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="/public/js/jass.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Guilt Free Gourmet</title>
+</head>
+
+<body>
+  <nav class="">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <p>Guilt Free Gourmet</p>
+      </a>
+      <!-- <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div> -->
+  
+    
+      <div class=" navbar-end dropdown is-hoverable">
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <p>Menu</p>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+                <ul><a href="loginAndSignUp.html"</a>Log In</ul>
+                <ul><a href="userProfile.html"</a>My Profile</ul>
+                <ul><a href="discoverRecipes.html"</a>Explore Recipes</ul>
+                <ul><a href="homePage.html"</a>Log Out</ul>
+          </div>
+        </div>
+    </div>
+      
+  </nav>
+<style>.hero {
+    background: black url(/public/images/rawfoodonwood.jpg) center / cover;
+}
+@media (max-width: 1024px) { .hero  { background:  black url(/public/images/rawfoodonwood.jpg) center / cover; } }
+@media (max-width: 768px) { .hero  { background: black url(/public/images/rawfoodonwood.jpg ) center / cover; } }</style>
+  
+  <section class="hero is-fullheight" >
+
+    <div>
+      <h2 class="text-center has-text-white">Welcome, {{name}}!</h2>
+    </div>
+  
+ 
+  <div class="container">
+    <div class="is-justify-content-center is-align-content-center" id="intro-page">
+      <h2 class="">Discover New Recipes</h2>
+      <!-- this is where the recipes from the api will display in link formation-->
+      
+      
+      <div>
+        <input class="has-text-black" type="text" placeholder="Search Favorite" autofocus />
+            <button class="btn">Find</button>
+      </div>
+      {{#if recipes.length}}
+      <div>
+        {{#each recipes as |recipe|}}
+          <div >
+            <h4><a href="/recipe/{{recipe.id}}">{{recipe.name}}</a></h4>
+          </div>
+        {{/each}}
+      </div>
+      {{/if}}
+    </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="is-justify-content-center is-align-content-center" id="intro-page">
+      <h2>New Recipe</h2>
+      <div>
+        <h2>{{name}}</h2>
+        <p>{{{ingredients}}}</p>
+        <p>{{directions}}</p>
+        
+      </div>
+      <div class="">
+        <div class="control">
+          <button class="button is-link">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+     <p class="text-center has-text-white">&copy; 2024 Guilt Free Gourmet</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+#intro-page {
+    background-color: #000; 
+    opacity: .7; 
+    color: white; 
+    padding: 10px; border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }

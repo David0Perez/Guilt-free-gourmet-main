@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/public/css/">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <link rel="stylesheet" href="/public/js/jass.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Guilt Free Gourmet</title>
+</head>
+
+<body>
+  <nav class="navbar is-transparent">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <p>Guilt Free Gourmet</p>
+      </a>
+      <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  
+   
+      <div class=" navbar-end dropdown is-hoverable">
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <p>Menu</p>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+                <ul><a href="loginAndSignUp.html"</a>Log In</ul>
+                <ul><a href="userProfile.html"</a>My Profile</ul>
+                <ul><a href="discoverRecipes.html"</a>Explore Recipes</ul>
+                <ul><a href="homePage.html"</a>Log Out</ul>
+          </div>
+        </div>
+    </div>
+      
+  </nav>
+<style>.hero {
+    background: black url(/public/images/rawfoodonwood.jpg) center / cover;
+}
+@media (max-width: 1024px) { .hero  { background:  black url(/public/images/rawfoodonwood.jpg) center / cover; } }
+@media (max-width: 768px) { .hero  { background: black url(/public/images/rawfoodonwood.jpg ) center / cover; } }</style>
+  
+  <section class="hero is-fullheight" >
+
+    <div>
+      <h2 class="text-center has-text-white">Welcome, {{name}}!</h2>
+    </div>
+  
+  <!-- this is the body of the create recipe page -->
+    <div class="container">
+      <div class="is-justify-content-center is-align-content-center" id="intro-page">
+        <h2 class="text-center">Create New Recipes</h2>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <form class="form new-recipe-form">
+            <div class="form-group">
+              <label for="recipe-name">Recipe Name:</label>
+              <input class="form-input has-text-black" type="text" id="recipe-name" name="recipe-name" />
+            </div>
+            <div></div>
+            <div class="form-group">
+              <label for="recipe-ingredients">Ingredients:</label>
+              <textarea class="form-input has-text-black" id="recipe-ingredients" name="recipe-ingridients"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="recipe-directions">Directions:</label>
+              <textarea class="form-input has-text-black" id="recipe-directions" name="recipe-directions"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+          </form>
+        </div>
+    </div>
+      </div>
+    </div>
+
+  
+  <div>
+    <p class="text-center has-text-white">&copy; 2024 Guilt Free Gourmet</p>
+ </div>
+
+
+  
+
+</body>
+</html>
